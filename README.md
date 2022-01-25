@@ -14,7 +14,5 @@
 
 ![plot](./project-planning/Text_Editor.jpg)
 
-### Languages
-- HTML
-- CSS
-- JavaScript
+### Technologies
+- React JS
