@@ -27,5 +27,23 @@ body {
 .taskbar{
   height: 50px;
   background-color: #E1E1E1;
-  bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* -----taskbar/start----- */
+.taskbar > .start {
+  width: 74px;
+  text-align: center;
+}
+
+/* -----taskbar/items----- */
+.taskbar > .taskbar-items {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.taskbar > .taskbar-items > .apps {
+  display: flex;
 }
