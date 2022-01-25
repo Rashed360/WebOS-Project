@@ -1,7 +1,6 @@
 * {
   margin: 0;
 }
-
 body {
   height: 100vh;
   background-color: grey;
@@ -36,6 +35,9 @@ body {
   width: 74px;
   text-align: center;
 }
+.taskbar > .start > .icon {
+  margin: 0 auto;
+}
 
 /* -----taskbar/items----- */
 .taskbar > .taskbar-items {
@@ -43,7 +45,14 @@ body {
   display: flex;
   justify-content: space-between;
 }
-
 .taskbar > .taskbar-items > .apps {
   display: flex;
+}
+
+/* -----icon----- */
+.icon {
+  border: 1px solid #606060;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
