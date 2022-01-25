@@ -2,6 +2,30 @@
   margin: 0;
 }
 
+body {
+  height: 100vh;
+  background-color: grey;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* -----app----- */
 .app {
-  
+  width: 800px;
+  height: 600px;
+  background-color: #B0B0B0;
+}
+
+/* -----desktop----- */
+.desktop {
+  height: 550px;
+  background-color: #B0B0B0;
+}
+
+/* -----taskbar----- */
+.taskbar{
+  height: 50px;
+  background-color: #E1E1E1;
+  bottom: 0;
 }
