@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 * {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 body {
   height: 100vh;
@@ -25,10 +26,10 @@ body {
   position: relative;
 }
 .desktop-content {
-  top: 20px;
+  top: 30px;
   right: 20px;
   bottom: 20px;
-  left: 20px;
+  left: 10px;
   position: absolute;
   display: flex;
   flex-flow: column wrap;
@@ -36,13 +37,32 @@ body {
 }
 .desktop-app {
   margin-top: 10px;
-  margin-left: 10px;
+  margin-left: 30px;
   width: 60px;
-  height: 72px;
-  background-color: red;
+  height: 110px;
+  /* background-color: red; */
 }
-.desktop-app > .icon {}
-.desktop-app > .text {}
+.desktop-app > .icon {
+  width: 60px;
+  height: 60px;
+  background: #F4BD61;
+  border: 1px solid #606060;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.desktop-app > .icon > img {
+  width: 20px;
+}
+.desktop-app > .text {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 18px;
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  color: #FFFFFF;
+  text-shadow: 1px 1px 2px black;
+}
 
 /* -----taskbar----- */
 .taskbar{
@@ -102,6 +122,7 @@ body {
   background-color: #6F7275;
   border-radius: 10px;
   z-index: 1;
+  /* toggle */
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.3s;

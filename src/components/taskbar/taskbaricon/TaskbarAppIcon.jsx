@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Icon = ({ size, color, radius, iconOnClick, ...props}) => {
+const TaskbarAppIcon = ({ size, color, radius, iconOnClick, ...props}) => {
     const iconSize = parseInt(size)
     const iconStyle = {
         backgroundColor: color,
@@ -15,4 +15,4 @@ const Icon = ({ size, color, radius, iconOnClick, ...props}) => {
     )
 }
 
-export default Icon
+export default TaskbarAppIcon

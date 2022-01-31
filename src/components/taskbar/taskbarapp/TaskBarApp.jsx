@@ -1,5 +1,5 @@
 import React from 'react'
-import Icon from '../../icon/Icon'
+import TaskbarAppIcon from '../taskbaricon/TaskbarAppIcon'
 
 const TaskBarApp = ({name,imgSrc,flavour,onClick,...props}) => {
 
@@ -9,9 +9,9 @@ const TaskBarApp = ({name,imgSrc,flavour,onClick,...props}) => {
 
   return (
     <div className={ props.active===name ? 'taskbar-app active' : 'taskbar-app'}>
-      <Icon size='30' color={flavour} radius='5' iconOnClick={taskbarAppAction.bind(null,name)}>
+      <TaskbarAppIcon size='30' color={flavour} radius='5' iconOnClick={taskbarAppAction.bind(null,name)}>
         <img src={imgSrc} alt="start" />
-      </Icon>
+      </TaskbarAppIcon>
     </div>
   )
 }

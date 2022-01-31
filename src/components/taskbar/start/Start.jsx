@@ -1,5 +1,5 @@
 import React from 'react'
-import Icon from '../../icon/Icon'
+import TaskbarAppIcon from '../taskbaricon/TaskbarAppIcon'
 
 const Start = () => {
 
@@ -8,9 +8,9 @@ const Start = () => {
   }
 
   return <div className='start'>
-    <Icon size='34' color='#6F7275' radius='5' iconOnClick={startButtonAction}>
+    <TaskbarAppIcon size='34' color='#6F7275' radius='5' iconOnClick={startButtonAction}>
       <img src="/images/start.png" alt="start" />
-    </Icon>
+    </TaskbarAppIcon>
   </div>
 }
 
