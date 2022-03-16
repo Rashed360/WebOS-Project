@@ -1,18 +1,18 @@
-const Context = () => {
+const Context = ({ pos }) => {
+	const { x, y } = pos
 	return (
 		<ul
 			className='menu'
 			style={{
-				top: anchorPoint.y,
-				left: anchorPoint.x,
+				left: x,
+				top: y,
 			}}
 		>
-			<li>Share to..</li>
-			<li>Cut</li>
-			<li>Copy</li>
-			<li>Paste</li>
 			<li>Refresh</li>
-			<li>Exit</li>
+			<li>Copy</li>
+			<li>Cut</li>
+			<li>Paste</li>
+			<li>More Options</li>
 		</ul>
 	)
 }

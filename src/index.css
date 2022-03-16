@@ -29,7 +29,24 @@ body {
 	pointer-events: none;
 	z-index: 999;
 }
-
+.menu {
+	font-size: 13px;
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 5px 2px;
+	width: 100px;
+	height: auto;
+	margin: 0;
+	position: absolute;
+	list-style: none;
+	border: 1px solid grey;
+}
+.menu li {
+	padding: 1px 1px;
+}
+.menu li:hover {
+	background-color: whitesmoke;
+}
 /* -----desktop----- */
 .desktop {
 	height: 550px;
