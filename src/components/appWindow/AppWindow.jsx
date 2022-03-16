@@ -1,53 +1,37 @@
 import { useState } from 'react'
+import useWindowDimensions from '../../hooks/useWindowDimensions'
 import Cross from '../../assets/cross.svg'
 import Minus from '../../assets/minus.svg'
 
 const AppWindow = props => {
-	const [windowBeingDragged, setWindowBeingDragged] = useState(null)
-	const [pos, setPos] = useState({
-		x: 320,
-		y: 10,
-	})
-	const STYLE = {
-		left: pos.x + 'px',
-		top: pos.y + 'px',
+	const { height, width } = useWindowDimensions()
+	const leftGap = (width - 800) / 2
+	const topGap = (height - 600) / 2
+	const [pos, setPos] = useState({ x: leftGap, y: topGap })
+
+	const roundUp = value => {
+		if (value < 0) return 0
+		return value
 	}
 
-	const dragStart = event => {
-		setWindowBeingDragged(event.target)
-
-		var style = window.getComputedStyle(event.target, null)
-
-		event.dataTransfer.setData(
-			'text/plain',
-			parseInt(style.getPropertyValue('left'), 10) -
-				event.clientX +
-				',' +
-				(parseInt(style.getPropertyValue('top'), 10) - event.clientY) +
-				',' +
-				event.target.getAttribute('data-item')
-		)
-
-		console.log('start')
+	const STYLE = {
+		left: pos.x - roundUp(leftGap),
+		top: pos.y - roundUp(topGap),
 	}
 
 	const dragOver = event => {
 		event.preventDefault()
-		console.log('over')
-		return false
 	}
 
 	const dragDrop = event => {
 		event.preventDefault()
+	}
 
-		setPos({ x: event.clientX, y: event.clientY })
-
-		var offset = event.dataTransfer.getData('text/plain').split(',')
-		// dm[parseInt(offset[2])].style.left = event.clientX + parseInt(offset[0], 10) + 'px'
-		// dm[parseInt(offset[2])].style.top = event.clientY + parseInt(offset[1], 10) + 'px'
-
-		console.log('drop', window.getComputedStyle(event.target, null))
-		// return false
+	const dragEnd = event => {
+		event.preventDefault()
+		// let rect = event.target.getBoundingClientRect()
+		const { clientX, clientY } = event
+		setPos({ x: clientX-200, y: clientY-15 })
 	}
 
 	return (
@@ -56,14 +40,14 @@ const AppWindow = props => {
 			style={STYLE}
 			draggable
 			dataitem={props.id}
-			onDragStart={dragStart}
 			onDragOver={dragOver}
 			onDrop={dragDrop}
+			onDragEnd={dragEnd}
 		>
 			<div className='title_bar'>
 				<div className='title_icon'>
 					<img src='/images/files.png' alt='' />
-					<span>Files</span>
+					<span>Files {leftGap + ' ' + topGap}</span>
 				</div>
 				<div className='title_utils'>
 					<button className='min'>

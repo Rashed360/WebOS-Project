@@ -10,6 +10,7 @@ const Desktop = () => {
 				<DesktopAPP name='Text Editor' icon='/images/start.png' accent='grey' />
 			</div>
 			<AppWindow id='0'>hello</AppWindow>
+			<AppWindow id='1'>hello</AppWindow>
 		</div>
 	)
 }

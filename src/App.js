@@ -27,8 +27,10 @@ const App = () => {
 
 	return (
 		<div className='app' onMouseMove={handleMouseMove} onContextMenu={contextMenu} onClick={handleClick}>
+
 			<Desktop />
 			<TaskBar />
+      
 			<Cursor pos={curPos} />
 			{show && <Context pos={anchorPoint} />}
 		</div>
