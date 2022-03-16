@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import Desktop from './components/desktop/Desktop'
-import TaskBar from './components/taskbar/TaskBar'
+import Desktop from './pages/desktop/Desktop'
+import TaskBar from './pages/taskbar/TaskBar'
 
 const App = () => {
 

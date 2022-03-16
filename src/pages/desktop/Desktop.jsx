@@ -1,5 +1,5 @@
 import React from 'react'
-import DesktopAPP from './desktopapp/DesktopAPP'
+import DesktopAPP from '../../components/desktopapp/DesktopAPP'
 
 const Desktop = () => {
   return (

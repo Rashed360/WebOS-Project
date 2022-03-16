@@ -1,5 +1,5 @@
 import React from 'react'
-import TaskbarAppIcon from '../taskbaricon/TaskbarAppIcon'
+import TaskbarAppIcon from '../../pages/taskbar/taskbaricon/TaskbarAppIcon'
 
 const TaskBarApp = ({name,imgSrc,flavour,onClick,...props}) => {
 

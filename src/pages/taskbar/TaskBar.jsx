@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import Start from './start/Start'
-import TaskBarApp from './taskbarapp/TaskBarApp'
+import TaskBarApp from '../../components/taskbarapp/TaskBarApp'
 import TimeDate from './timedate/TimeDate'
 import StartMenu from './start/startmenu/StartMenu'
 
