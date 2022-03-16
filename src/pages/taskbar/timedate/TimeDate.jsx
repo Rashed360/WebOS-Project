@@ -3,14 +3,20 @@ import { useState, useEffect } from 'react'
 
 const TimeDate = () => {
 	const [timeDate, setTimeDate] = useState({})
-
-	useEffect(() => {
+	const currentTime = () => {
 		var date = new Date()
 		var hour = date.getHours()
 		var min = date.getMinutes()
 		var sec = date.getSeconds()
+		setTimeout(function () {
+			currentTime()
+		}, 1000)
 		setTimeDate({ hour, min, sec })
-	}, [])
+	}
+
+	// useEffect(() => {
+	// 	currentTime()
+	// })
 
 	return (
 		<div className='time-date'>
