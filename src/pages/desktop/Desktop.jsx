@@ -9,7 +9,7 @@ const Desktop = () => {
 				<DesktopAPP name='Trash' icon='/images/files.png' accent='red' />
 				<DesktopAPP name='Text Editor' icon='/images/start.png' accent='grey' />
 			</div>
-			<AppWindow />
+			<AppWindow id='0'>hello</AppWindow>
 		</div>
 	)
 }

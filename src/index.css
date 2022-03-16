@@ -3,8 +3,11 @@
 	margin: 0;
 	font-family: 'Poppins', sans-serif;
 }
+body,
+html {
+	min-height: 100vh;
+}
 body {
-	height: 100vh;
 	background-color: grey;
 	display: flex;
 	justify-content: space-around;
@@ -13,9 +16,18 @@ body {
 
 /* -----app----- */
 .app {
+	cursor: none;
 	width: 800px;
 	height: 600px;
+	overflow: hidden;
 	background-color: #b0b0b0;
+}
+.cursor {
+	position: fixed;
+	height: 15px;
+	width: 13px;
+	pointer-events: none;
+	z-index: 999;
 }
 
 /* -----desktop----- */
@@ -161,13 +173,14 @@ body {
 	position: absolute;
 	width: 400px;
 	height: 300px;
-	left: 320px;
-	top: 10px;
+	left: 0;
+	top: 0;
 	overflow: hidden;
 	background-color: #e5e5e5;
 	border-radius: 10px;
 }
 .window .title_bar {
+	user-select: none;
 	width: 100%;
 	height: 30px;
 	background-color: #6f7275;
@@ -175,28 +188,81 @@ body {
 	justify-content: space-between;
 }
 .window .title_bar .title_icon {
-  display: flex;
-  margin-left: 15px;
-  align-items: center;
+	display: flex;
+	margin-left: 15px;
+	align-items: center;
 }
 .window .title_bar .title_icon span {
-  margin-left: 5px;
+	margin-left: 5px;
 	color: white;
 	font-weight: 400;
 	font-size: 13px;
 	line-height: 20px;
 	color: #ffffff;
 }
-.window .title_bar .title_icon img{
+.window .title_bar .title_icon img {
 	height: 12px;
 }
 .window .title_bar .title_utils {
+	margin-right: 15px;
 	display: flex;
+	align-items: center;
 	gap: 5px;
 }
+.window .title_bar .title_utils .close {
+	background-color: #da292e;
+}
+.window .title_bar .title_utils .close:hover {
+	background-color: #bb1c21;
+}
+.window .title_bar .title_utils .min {
+	background-color: #f4bd61;
+}
+.window .title_bar .title_utils .min:hover {
+	background-color: #d4a34d;
+}
 .window .title_bar .title_utils button {
+	cursor: none;
 	width: 16px;
 	height: 16px;
 	border-radius: 50%;
 	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.window .action_bar {
+	background-color: #c4c4c4;
+	display: flex;
+	height: 20px;
+	padding-left: 10px;
+}
+.window .action_bar .action {
+	display: flex;
+	align-items: center;
+	padding: 5px 0px 5px 5px;
+}
+.window .action_bar .action:hover {
+	background-color: #b9b9b9;
+}
+.window .action_bar .action .action_icon {
+	width: 10px;
+	height: 10px;
+	background-color: white;
+	border: 1px solid #606060;
+	border-radius: 2px;
+}
+.window .action_bar .action .action_icon.brown {
+	background-color: #f4bd61;
+}
+.window .action_bar .action span {
+	margin: 0px 3px;
+	font-weight: 400;
+	font-size: 10px;
+	color: #606060;
+}
+.window .content {
+	width: 100%;
+	height: 100%;
+	background-color: white;
 }
